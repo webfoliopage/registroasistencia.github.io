@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Asistencia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="imagenes/asistencia.png">
+  <link rel="stylesheet" href="styless.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>📋 Registro de Asistencia</h1>
+      <p>Completa el formulario para registrar tu entrada o salida</p>
+    </header>
+    <main>
+      <form id="asistenciaForm" autocomplete="off">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" placeholder="Ej: Juan Pérez" required>
+        <label for="establecimiento">Establecimiento</label>
+        <select id="establecimiento" required>
+          <option value="">-- Selecciona uno --</option>
+          <option>Lizarzaburu</option>
+          <option>Centro 1</option>
+          <option>Centro 3</option>
+          <option>Santa Rosa</option>
+          <option>La Panadería</option>
+          <option>Yaruquíes</option>
+          <option>La Georgina</option>
+          <option>Centro de Salud de Alausí</option>
+          <option>Centro de Salud de Chunchi</option>
+          <option>Centro de Salud de Cumandá</option>
+          <option>Centro de Salud de Pallatanga</option>
+          <option>Centro de Salud de Colta</option>
+          <option>Centro de Salud de Guano</option>
+          <option>Centro de Salud de Penipe</option>
+          <option>Centro de Salud de San Andrés</option>
+          <option>Centro de Salud de Chambo</option>
+          <option>Coordinación Zonal 3</option>
+          <option>Distrito Colta</option>
+          <option>Distrito Penipe</option>
+          <option>Distrito Alausí</option>
+          <option>Distrito Cacha-Marachamga</option>
+        </select>
+
+        <div class="button-group">
+          <button type="button" id="btnEntrada" class="entrada">Registrar Entrada</button>
+          <button type="button" id="btnSalida" class="salida">Registrar Salida</button>
+        </div>
+      </form>
+
+      <section id="qrcode" class="qr-container"></section>
+    </main>
+
+    <footer>
+      <p>© 2025 | Sistema de Asistencia</p>
+    </footer>
+  </div>
+
+</body>
+</html>
